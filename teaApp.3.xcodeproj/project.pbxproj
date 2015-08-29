@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1B6B141B9139E700070F4F /* AddTeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B6B131B9139E700070F4F /* AddTeaViewController.swift */; };
+		2C1B6B161B913ABA00070F4F /* TeaListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B6B151B913ABA00070F4F /* TeaListTableViewController.swift */; };
+		2C1B6B181B913F0800070F4F /* Tea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B6B171B913F0800070F4F /* Tea.swift */; };
 		2C68CCDE1B8DBFD500467D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68CCDD1B8DBFD500467D29 /* AppDelegate.swift */; };
 		2C68CCE01B8DBFD500467D29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68CCDF1B8DBFD500467D29 /* ViewController.swift */; };
 		2C68CCE31B8DBFD500467D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C68CCE11B8DBFD500467D29 /* Main.storyboard */; };
@@ -15,8 +18,6 @@
 		2C68CCF31B8DBFD500467D29 /* teaApp_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68CCF21B8DBFD500467D29 /* teaApp_3Tests.swift */; };
 		2C68CCFE1B8DBFD500467D29 /* teaApp_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68CCFD1B8DBFD500467D29 /* teaApp_3UITests.swift */; };
 		2CB752C21B90BC2600DA8B9E /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB752C11B90BC2600DA8B9E /* ToDoItem.swift */; };
-		2CEF1B961B8FBC4B0026795A /* NewTeaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF1B951B8FBC4B0026795A /* NewTeaTableViewCell.swift */; };
-		2CEF1B981B8FBD000026795A /* NewTeaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF1B971B8FBD000026795A /* NewTeaTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C1B6B131B9139E700070F4F /* AddTeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeaViewController.swift; sourceTree = "<group>"; };
+		2C1B6B151B913ABA00070F4F /* TeaListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaListTableViewController.swift; sourceTree = "<group>"; };
+		2C1B6B171B913F0800070F4F /* Tea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tea.swift; sourceTree = "<group>"; };
 		2C68CCDA1B8DBFD500467D29 /* teaApp.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teaApp.3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C68CCDD1B8DBFD500467D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C68CCDF1B8DBFD500467D29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,8 +56,6 @@
 		2C68CCFF1B8DBFD500467D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C68CD111B8EFE6A00467D29 /* teaApp.3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "teaApp.3-Bridging-Header.h"; sourceTree = "<group>"; };
 		2CB752C11B90BC2600DA8B9E /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
-		2CEF1B951B8FBC4B0026795A /* NewTeaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTeaTableViewCell.swift; sourceTree = "<group>"; };
-		2CEF1B971B8FBD000026795A /* NewTeaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTeaTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +110,9 @@
 				2C68CCDD1B8DBFD500467D29 /* AppDelegate.swift */,
 				2C68CCDF1B8DBFD500467D29 /* ViewController.swift */,
 				2C68CCE11B8DBFD500467D29 /* Main.storyboard */,
-				2CEF1B951B8FBC4B0026795A /* NewTeaTableViewCell.swift */,
-				2CEF1B971B8FBD000026795A /* NewTeaTableViewController.swift */,
+				2C1B6B171B913F0800070F4F /* Tea.swift */,
+				2C1B6B131B9139E700070F4F /* AddTeaViewController.swift */,
+				2C1B6B151B913ABA00070F4F /* TeaListTableViewController.swift */,
 				2CB752C11B90BC2600DA8B9E /* ToDoItem.swift */,
 				2C68CCE41B8DBFD500467D29 /* Assets.xcassets */,
 				2C68CCE61B8DBFD500467D29 /* LaunchScreen.storyboard */,
@@ -268,11 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1B6B181B913F0800070F4F /* Tea.swift in Sources */,
 				2C68CCE01B8DBFD500467D29 /* ViewController.swift in Sources */,
-				2CEF1B981B8FBD000026795A /* NewTeaTableViewController.swift in Sources */,
 				2CB752C21B90BC2600DA8B9E /* ToDoItem.swift in Sources */,
 				2C68CCDE1B8DBFD500467D29 /* AppDelegate.swift in Sources */,
-				2CEF1B961B8FBC4B0026795A /* NewTeaTableViewCell.swift in Sources */,
+				2C1B6B161B913ABA00070F4F /* TeaListTableViewController.swift in Sources */,
+				2C1B6B141B9139E700070F4F /* AddTeaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

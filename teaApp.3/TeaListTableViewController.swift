@@ -1,43 +1,43 @@
 //
-//  NewTeaTableViewController.swift
+//  TeaListTableViewController.swift
 //  teaApp.3
 //
-//  Created by john wang on 8/27/15.
+//  Created by john wang on 8/28/15.
 //  Copyright © 2015 john wang. All rights reserved.
 //
 
 import UIKit
 
-class NewTeaTableViewController: UITableViewController{
-    var teaImages = [String]()
-    var teaNames = [String]()
-    var teaNotes = [Int]()
-    var teaAmount = [Double]()
-   
+class TeaListTableViewController: UITableViewController {
+    //name: String, com: Bool, image: String, loc: String, amount: Int = 0, numbersOfNotes: Int = 0
+    var teaItems: [Tea] = [Tea(name:"Tea1", com:true, image: "defaultPhoto.png", loc:"China", amount:2, numbersOfNotes: 0), Tea(name:"Tea2", com:true, image: "defaultPhoto.png", loc:"Taiwang", amount:50, numbersOfNotes: 0)]
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        teaImages = ["defaultPhoto.png",
-        "defaultPhoto.png",
-        "defaultPhoto.png",
-        "defaultPhoto.png"]
-        
-        
-        teaNames = ["Buckingham Palace",
-            "The Eiffel Tower",
-            "The Grand Canyon",
-            "Windsor Castle"]
-        
-        
-        teaNotes = [1,0,0,1,]
-        teaAmount = [12, 50, 23, 25]
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+
+    
+    @IBAction func cancelToDoListTableViewController(segue: UIStoryboardSegue){
+        
+        
+    }
+    @IBAction func saveToDoListTableViewController(segue: UIStoryboardSegue){
+        
+        //if let source = segue.sourceViewController as? AddToDoItemViewController{
+            //self.toDoItems.append(source.toDoItem)
+            //self.tableView.reloadData()
+        //}
+    }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -53,30 +53,19 @@ class NewTeaTableViewController: UITableViewController{
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        
-        //here is the problem, it will not take anything buy 0
-        return self.teaNames.count
+        print(self.teaItems.count)
+        return 0
     }
 
-   
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("NewTeaTableViewCell", forIndexPath: indexPath) as! NewTeaTableViewCell
-        
-        let row2 = indexPath.row
-        
-        cell.newTeaAmount.text = "Amount left"
-        cell.newTeaIV?.image = UIImage(named: teaImages[row2])
-        cell.newTeaNotes?.text = "amount left"
-        cell.newTeaName?.text = teaNames[row2]
-  
-        
-        
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
         // Configure the cell...
 
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.

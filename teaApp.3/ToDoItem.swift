@@ -23,6 +23,7 @@ class ToDoItem: NSObject{
     func markAsCompleted(isCompleted: Bool){
         self.completed = isCompleted
     }
+    
     /*
     func onDate(date: NSDate){
     creationDate = date

@@ -41,10 +41,10 @@ class TeaListTableViewController: UITableViewController {
     }
     @IBAction func saveToDoListTableViewController(segue: UIStoryboardSegue){
         
-        //if let source = segue.sourceViewController as? AddToDoItemViewController{
-            //self.toDoItems.append(source.toDoItem)
-            //self.tableView.reloadData()
-        //}
+        if let source = segue.sourceViewController as? AddTeaViewController{
+            self.teaItems.append(source.newTeaItem)
+            self.tableView.reloadData()
+        }
     }
     
     
@@ -73,7 +73,8 @@ class TeaListTableViewController: UITableViewController {
         // Configure the cell...
         let cell = tableView.dequeueReusableCellWithIdentifier("ListPrototypeCell", forIndexPath: indexPath) as! TeaListTableViewCell
         let teaItem = teaItems[indexPath.row] as Tea
-        cell.imageViewField.image = teaItem.itemImage
+        //the image is not displaying ... new bugs on 8-29-2015 helps ... need to sleep
+        cell.imageViewField?.image = teaItem.itemImage
         cell.teaNameLabelField.text = teaItem.itemName
         cell.teaLocLabelField.text = teaItem.itemLocation
         cell.teaAmountLabelField.text = "\(teaItem.itemAmount)g left"

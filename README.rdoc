@@ -1,6 +1,9 @@
-##Problems
-# Last bugs fixed
-# New Issues: Under TeaListTableViewController.swift
-# override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-# cell.imageViewField.image = teaItem.itemImage is not displaying the image of default image
+= ##Problems
+== # Last bugs fixed
+== * New Issues: Under TeaListTableViewController.swift
+* override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+* cell.imageViewField.image = teaItem.itemImage is not displaying the image of default image
+== * add new function to AddTeaViewController.swift
+* The image viewer is still not completed
+* The Amount Text Field need to change to limit to number key input only
 

@@ -46,7 +46,7 @@
                                                         <color key="textColor" red="0.11955696166904163" green="0.27152383207070707" blue="0.021988310676476136" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Delicious oolong" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzx-N3-ocP">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Delicious oolong" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzx-N3-ocP">
                                                         <rect key="frame" x="432" y="141" width="128" height="30"/>
                                                         <color key="textColor" red="0.56427556818181812" green="0.56427556818181812" blue="0.56427556818181812" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -82,7 +82,7 @@
                                                 <color key="textColor" red="0.11955696170000001" green="0.27152383209999997" blue="0.021988310680000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Store name or URL" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3sZ-DM-F3u">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Store name or URL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3sZ-DM-F3u">
                                                 <rect key="frame" x="0.0" y="191.5" width="560" height="30"/>
                                                 <color key="textColor" red="0.60710621843434343" green="0.60710621843434343" blue="0.60710621843434343" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -94,7 +94,7 @@
                                                 <color key="textColor" red="0.11955696170000001" green="0.27152383209999997" blue="0.021988310680000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100g" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jNF-68-Ayq">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100g" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jNF-68-Ayq">
                                                 <rect key="frame" x="0.0" y="242" width="560" height="30"/>
                                                 <color key="textColor" red="0.60710621843434343" green="0.60710621843434343" blue="0.60710621843434343" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -158,6 +158,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="nP9-Jo-P2l" id="Hfp-kT-KpP"/>
+                        <outlet property="newAmountTextField" destination="jNF-68-Ayq" id="1fN-Ck-6DX"/>
+                        <outlet property="newLocTextField" destination="3sZ-DM-F3u" id="IuF-mz-ojA"/>
+                        <outlet property="newTeaNameTextField" destination="bzx-N3-ocP" id="AuB-XI-NVT"/>
+                        <outlet property="newViewImageField" destination="Udl-5M-VP7" id="yjE-BK-JSR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="SM1-CA-rkU" userLabel="Exit" sceneMemberID="exit"/>
@@ -177,10 +184,10 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="394"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V33-H8-E1X" id="YjJ-PE-d8Q">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="394"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="393.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yf0-IU-jRv">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Yf0-IU-jRv">
                                             <rect key="frame" x="8" y="8" width="584" height="251"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="251" id="dSx-Cu-CqA"/>

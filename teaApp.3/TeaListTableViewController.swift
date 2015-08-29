@@ -10,7 +10,11 @@ import UIKit
 
 class TeaListTableViewController: UITableViewController {
     //name: String, com: Bool, image: String, loc: String, amount: Int = 0, numbersOfNotes: Int = 0
-    var teaItems: [Tea] = [Tea(name:"Tea1", com:true, image: "defaultPhoto.png", loc:"China", amount:2, numbersOfNotes: 0), Tea(name:"Tea2", com:true, image: "defaultPhoto.png", loc:"Taiwang", amount:50, numbersOfNotes: 0)]
+ 
+    
+    
+    
+    var teaItems = [Tea]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +24,16 @@ class TeaListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        loadTeas()
     }
     
-
+    func loadTeas(){
+        let photo1 = UIImage(named: "defaultPhoto.png")
+        let tea1 = Tea(name:"Tea1", com:true, image: photo1, loc:"China", amount:2, numbersOfNotes: 0)
+        let photo2 = UIImage(named: "defaultPhoto.png")
+        let tea2 = Tea(name:"Tea2", com:true, image: photo2, loc:"Taiwang", amount:50, numbersOfNotes: 0)
+        teaItems += [tea1, tea2]
+    }
     
     @IBAction func cancelToDoListTableViewController(segue: UIStoryboardSegue){
         
@@ -53,19 +64,26 @@ class TeaListTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print(self.teaItems.count)
-        return 0
+        return self.teaItems.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
+        
         // Configure the cell...
+        let cell = tableView.dequeueReusableCellWithIdentifier("ListPrototypeCell", forIndexPath: indexPath) as! TeaListTableViewCell
+        let teaItem = teaItems[indexPath.row] as Tea
+        cell.imageViewField.image = teaItem.itemImage
+        cell.teaNameLabelField.text = teaItem.itemName
+        cell.teaLocLabelField.text = teaItem.itemLocation
+        cell.teaAmountLabelField.text = "\(teaItem.itemAmount)g left"
+        cell.teaNumberOfNotesLabelField.text = "\(teaItem.itemNumberOfNotes) testing note"
+        
+        
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

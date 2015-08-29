@@ -1,0 +1,6 @@
+##Problems
+# Last bugs fixed
+# New Issues: Under TeaListTableViewController.swift
+# override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+# cell.imageViewField.image = teaItem.itemImage is not displaying the image of default image
+

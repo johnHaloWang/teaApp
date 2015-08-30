@@ -28,10 +28,11 @@ class TeaListTableViewController: UITableViewController {
     }
     
     func loadTeas(){
-        let photo1 = UIImage(named: "defaultPhoto.png")
-        let tea1 = Tea(name:"Tea1", com:true, image: photo1, loc:"China", amount:2, numbersOfNotes: 0)
-        let photo2 = UIImage(named: "defaultPhoto.png")
-        let tea2 = Tea(name:"Tea2", com:true, image: photo2, loc:"Taiwang", amount:50, numbersOfNotes: 0)
+        
+        let tea1 = Tea(name:"Tea1", com:true, image: "1.jpg", loc:"China", amount:2, numbersOfNotes: 0)
+        //let photo2 = "defaultPhoto.png"
+        //print(photo1)
+        let tea2 = Tea(name:"Tea2", com:true, image: "2.jpg", loc:"Taiwang", amount:50, numbersOfNotes: 0)
         teaItems += [tea1, tea2]
     }
     
@@ -74,7 +75,10 @@ class TeaListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ListPrototypeCell", forIndexPath: indexPath) as! TeaListTableViewCell
         let teaItem = teaItems[indexPath.row] as Tea
         //the image is not displaying ... new bugs on 8-29-2015 helps ... need to sleep
-        cell.imageViewField?.image = teaItem.itemImage
+        
+         let image = UIImage(named: teaItem.itemImage)
+        print(image)
+        cell.imageViewField.image = image
         cell.teaNameLabelField.text = teaItem.itemName
         cell.teaLocLabelField.text = teaItem.itemLocation
         cell.teaAmountLabelField.text = "\(teaItem.itemAmount)g left"

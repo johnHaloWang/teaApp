@@ -9,33 +9,41 @@
 import UIKit
 
 class AddTeaViewController: UIViewController, UITextFieldDelegate {
-
+    //all outlet elements
     @IBOutlet weak var doneButton: UIBarButtonItem!
-    
     @IBOutlet weak var newViewImageField: UIImageView!
-    
     @IBOutlet weak var newTeaNameTextField: UITextField!
-    
     @IBOutlet weak var newLocTextField: UITextField!
     @IBOutlet weak var newAmountTextField: UITextField!
+    //new tea item that needs to send data to TeaListTableViewCell.swift
     
-    var newTeaItem = Tea(name:"Tea2", com:true, image: UIImage(named: "defaultPhoto.png"), loc:"Taiwang", amount:50, numbersOfNotes: 0)
+    var newTeaItem = Tea(name:"Tea2", com:true, image: "1.jpg", loc:"Taiwang", amount:0, numbersOfNotes: 0)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        newTeaNameTextField.delegate = self
-        newLocTextField.delegate = self
-        newAmountTextField.delegate = self
+        //UITextFieldDelegate setup
+        initializeTextFields()
+        
         
     }
-
+    
+    func initializeTextFields() {
+        newTeaNameTextField.delegate = self
+        //newTeaNameTextField.keyboardType = UIKeyboardType.ASCIICapable
+        
+        newLocTextField.delegate = self
+        //newLocTextField.keyboardType = UIKeyboardType.ASCIICapable
+        newAmountTextField.delegate = self
+        //newAmountTextField.keyboardType = UIKeyboardType.NumberPad
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //code required for UITextFieldDelegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         // Hide the keyboard.
         newTeaNameTextField.resignFirstResponder()
@@ -56,15 +64,19 @@ class AddTeaViewController: UIViewController, UITextFieldDelegate {
         if(sender?.type == self.doneButton){
             return;
         }
+        //retrieve data from the text field on the Table View Cell
         if(self.newTeaNameTextField != nil){
             self.newTeaItem.itemName = self.newTeaNameTextField.text!
         }
-        if(self.newLocTextField != nil){
+        if(self.newLocTextField != nil ){
             self.newTeaItem.itemLocation = self.newLocTextField.text!
+
         }
         if(self.newAmountTextField != nil){
             let convertAmount = self.newAmountTextField.text!
-            self.newTeaItem.itemAmount = Int(convertAmount)!
+            if(convertAmount != ""){
+                self.newTeaItem.itemAmount = Int(convertAmount)!
+            }
         }
         
         

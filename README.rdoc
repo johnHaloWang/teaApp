@@ -2,8 +2,8 @@
 == # Last bugs fixed
 == * New Issues: Under TeaListTableViewController.swift
 * override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-* cell.imageViewField.image = teaItem.itemImage is not displaying the image of default image
+* cell.imageViewField.image = teaItem.itemImage is not displaying the image of default image (fixed)
 == * add new function to AddTeaViewController.swift
 * The image viewer is still not completed
-* The Amount Text Field need to change to limit to number key input only
-
+* The Amount Text Field need to change to limit to number key input only (done)
+* Need issue: once the number keypad shows up, the app need to be able to tap on the clean space to put number keypad aways

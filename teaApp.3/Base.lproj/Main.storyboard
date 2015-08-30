@@ -184,7 +184,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="394"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V33-H8-E1X" id="YjJ-PE-d8Q">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="393.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="394"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Yf0-IU-jRv">
